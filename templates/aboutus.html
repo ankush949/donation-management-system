@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+
+  <!-- Header -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-body">About HappyDonations</h2>
+    <p class="text-muted" style="max-width: 700px; margin: auto;">
+      We are a non-profit organization dedicated to bringing light into the lives of the underprivileged through food, education, and medical aid.
+    </p>
+  </div>
+
+  <!-- Introduction Section -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="{% static 'images/about_us_main.jpg' %}" class="img-fluid rounded shadow" alt="About HappyDonations" style="max-height: 350px; object-fit: cover; width: 100%;">
+
+    </div>
+    <div class="col-md-6">
+      <h3 class="fw-bold">Our Story</h3>
+      <p class="text-muted">
+        Founded with compassion, HappyDonations serves as a bridge between those who want to give and those in need.
+        Our mission is to ensure that no child sleeps hungry, no patient is denied care, and no mind is left without education.
+      </p>
+      <p class="text-muted">
+        From local drives to digital campaigns, our volunteers and donors work tirelessly to make an impact. Every contribution,
+        small or big, fuels hope in someone’s life.
+      </p>
+    </div>
+  </div>
+
+  <!-- Vision & Mission -->
+  <div class="row mb-5">
+    <div class="col-md-6 mb-4">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="text-body fw-bold">Our Vision</h4>
+        <p class="text-muted">
+          A world where every individual has access to basic needs — food, education, and healthcare — regardless of their background or circumstances.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="text-body fw-bold">Our Mission</h4>
+        <p class="text-muted">
+          To empower communities by mobilizing resources and support, enabling sustainable change through collective effort and compassion.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team or Impact Images -->
+  <div class="text-center mb-4">
+    <h4 class="fw-bold text-body">Moments from Our Journey</h4>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <img src="{% static 'images/about1.jpg' %}" class="img-fluid rounded shadow-sm" alt="Work 1">
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'images/about2.jpg' %}" class="img-fluid rounded shadow-sm" alt="Work 2">
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'images/about3.jpg' %}" class="img-fluid rounded shadow-sm" alt="Work 3">
+    </div>
+  </div>
+
+</div>
+{% endblock %}

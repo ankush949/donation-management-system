@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow p-4">
+        <h2 class="text-center mb-4 fw-bold text-primary">Contact Us</h2>
+        
+        <form method="POST">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            {{ form.name.label_tag }}
+            {{ form.name }}
+            {% if form.name.errors %}
+              <div class="text-danger small">{{ form.name.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="mb-3">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="text-danger small">{{ form.email.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="mb-3">
+            {{ form.phone_number.label_tag }}
+            {{ form.phone_number }}
+            {% if form.phone_number.errors %}
+              <div class="text-danger small">{{ form.phone_number.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="mb-3">
+            {{ form.subject.label_tag }}
+            {{ form.subject }}
+            {% if form.subject.errors %}
+              <div class="text-danger small">{{ form.subject.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="mb-3">
+            {{ form.message.label_tag }}
+            {{ form.message }}
+            {% if form.message.errors %}
+              <div class="text-danger small">{{ form.message.errors }}</div>
+            {% endif %}
+          </div>
+
+          <div class="form-check mb-3">
+            
+            {{ form.consent.label_tag }}
+            {{ form.consent }}
+            {% if form.consent.errors %}
+              <div class="text-danger small">{{ form.consent.errors }}</div>
+            {% endif %}
+          </div>
+          <br><br>
+          <button type="submit" class="btn btn-success w-100">Send Message</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

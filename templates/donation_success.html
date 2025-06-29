@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow p-4 text-center">
+        <div class="mb-3">
+          <!-- Bootstrap success icon (SVG) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.97 11.03a.75.75 0 0 0 1.08 0l3.992-3.992a.75.75 0 1 0-1.06-1.06L7.5 9.44 5.53 7.47a.75.75 0 1 0-1.06 1.06l2.5 2.5z"/>
+          </svg>
+        </div>
+        <h3 class="text-success fw-bold">Thank You!</h3>
+        <p class="mb-4">Your donation has been successfully submitted.</p>
+        <a href="{% url 'make_donation' %}" class="btn btn-primary w-100 mb-2">Make Another Donation</a>
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary w-100">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

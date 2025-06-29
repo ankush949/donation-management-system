@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5 bg-donation-dark">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold heading-dark">Choose What You Want to Donate</h2>
+    <p class="text-muted">Every donation creates a ripple of kindness. Select a category to proceed.</p>
+  </div>
+
+  <div class="row g-4">
+    
+    <!-- Food -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-food.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Food Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Food</h5>
+          <p class="text-muted">Help us feed the hungry by donating packaged or homemade food.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Food</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clothes -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-clothes.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Clothes Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Clothes</h5>
+          <p class="text-muted">Share warmth by donating gently used or new clothes.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Clothes</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medicines -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-medicines.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Medicines Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Medicines</h5>
+          <p class="text-muted">Support healthcare by contributing basic medical supplies.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Medicines</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Books -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-books.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Books Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Books</h5>
+          <p class="text-muted">Inspire young minds by donating schoolbooks and storybooks.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Books</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toys -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-toys.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Toys Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Toys</h5>
+          <p class="text-muted">Bring joy and smiles by donating toys to children in need.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Toys</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sanitary Kits -->
+    <div class="col-md-4">
+      <div class="card shadow-theme text-center p-4 h-100">
+        <div class="card-body d-flex flex-column align-items-center">
+          <img src="{% static 'images/donate-sanitary.jpg' %}" class="mb-3 rounded-circle" width="100" height="100" alt="Sanitary Icon" style="object-fit: cover;">
+          <h5 class="card-title fw-bold">Sanitary Kits</h5>
+          <p class="text-muted">Support hygiene and dignity by donating sanitary kits for women and girls.</p>
+          <a href="{% url 'make_donation' %}" class="btn btn-outline-primary btn-sm mt-2">Donate Kits</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
